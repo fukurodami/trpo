@@ -1,0 +1,178 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .5s ease-in-out;
+ }
+ ul {
+    list-style: none;
+ }
+
+ li{
+     margin: 20px;
+ }
+ a {
+    text-decoration: none;
+    outline: none;
+ }
+ img {
+    display: block;
+
+ }
+ h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: normal;
+    letter-spacing: 1px;
+ }
+ body {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 1;
+    color: #373737;
+    background: #c9bf8a;
+
+}
+
+section {
+    height: 1000px;
+    padding: 0 15px;
+}
+
+@media (min-width: 575.98px){
+    section {
+      padding: 0 calc(50% - 270px);
+    }
+}
+
+@media (min-width: 767.98px){
+    section {
+      padding: 0 calc(50% - 360px);
+    }
+}
+
+@media (min-width: 991.98px) {
+    section {
+      padding: 0 calc(50% - 480px);
+    }
+}
+
+@media (min-width: 1199.98px){
+    section {
+      padding: 0 calc(50% - 590px);
+    }
+}
+
+.posts-list {
+    margin-top: 150px;
+    margin-bottom: 30px;
+    float: left;
+    display: flex;
+ }
+
+.posts-text {
+    font-size: 40px;
+    text-align: center;
+    background-color: #f5e9ab;
+    padding: 20px 20px;
+    width: 600px;
+    top: 260px;
+    left: 410px;
+}
+
+.posts-text-info{
+    border-top: 150px;
+    display: flex;
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px 30px;
+}
+
+.btn{
+    width: 360px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 100px;
+    background-color: #c9bf8a;
+}
+
+ .post-image {
+    margin-left: 50px;
+    margin-bottom: 30px;
+    width: 400px;
+    height: 560px;
+ }
+
+ .post-image > a > img {
+    width: 700px;
+    height: 560px;
+ }
+
+.catalog{
+    display: flex;
+}
+
+.help{
+    width: 270px;
+    background-color: #bba950;;
+    height: 1080px;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.help > input{
+    width: 230px;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: #f5e9ab;;
+}
+.content{
+	margin-top: 50px;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book {
+	background: #fff none repeat scroll 0 0;
+    max-width: 300px;
+    max-height: 600px;
+    width: 100%;
+    height: auto;
+	border: 1px solid #c0c0c0;
+	overflow: hidden;
+	padding: 25px 15px;
+	text-align: left;
+	transition: all 0.5s ease 0s;
+	margin-bottom: 20px;
+}
+
+.book:hover {
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+.book-img > img  {
+    width: 30px;
+
+}
+
+img {
+    width: 250px;
+}
+.book-title a {
+	color: #000;
+	font-weight: 500;
+    font-size: 18px;
+	text-transform: uppercase;
+}
+.book-auth {
+    color: #000000;
+	font-size: 18px;
+	font-weight: 500;
+}
+.book-price {
+	color: #d51e08;
+	font-size: 18px;
+	font-weight: 500;
+}

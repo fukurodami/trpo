@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Book</title>
+    <link rel="stylesheet" href="{% static 'css/style_book.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    </div>
+    <section>
+      <div class="content">
+        <div class="catalog">
+          <div class="books">
+            <div class="book">
+              <div class="book-img">
+                <a><img src="{{ book.image.url }}" alt=""></a>
+              </div>
+              <p class="book-title">Название: {{ book.title }}</p>
+              <p class="book-auth">Жанр: {{ book.genre }}</p>
+              <p class="book-auth">Автор: {{ book.authors }}</p>
+              <p class="book-auth">Издательство: {{ book.publisher }}</p>
+              <p class="book-auth">Переводчик: {{ book.translator }}</p>
+              <p class="book-auth">Дата издания: {{ book.date_ls }}</p>
+              <p class="book-auth">Вес: {{ book.weight }} г.</p>
+              <p class="book-auth">Количество страниц: {{ book.numb_page }} стр.</p>
+              <p class="book-auth">Возростное ограничение: {{ book.age_limit }}</p>
+              <p class="book-auth">Аннотация: {{ book.annotation }}</p>
+              <p class="book-price">Цена: {{ book.price }}р.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
