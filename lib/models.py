@@ -43,24 +43,6 @@ class Publisher(models.Model):
         verbose_name = "Издательство"
         verbose_name_plural = "Издательства"
 
-# class Reader(models.Model):
-#     """Читатель книги"""
-#     first_name = models.CharField("Имя", max_length=30)
-#     Отвечтво = models.CharField("Отчество", max_length=30, null=True, blank=True)
-#     last_name = models.CharField("Фамилия", max_length=40)
-#     email = models.EmailField("Почта", unique=True)
-#     city = models.CharField("Город", max_length=40)
-#     street = models.CharField("Улица", max_length=40)
-#     home = models.PositiveIntegerField("Дом")
-#     room = models.PositiveIntegerField("Квартира")
-
-#     def __str__(self):
-#         return f'{self.last_name} {self.first_name}'
-
-#     class Meta:
-#         verbose_name = "Читатель"
-#         verbose_name_plural = "Читатели"
-
 class Genre(models.Model):
     """Жанр книги"""
     genre = models.CharField("Жанр", max_length=100)
@@ -102,6 +84,24 @@ class Book(models.Model):
     class Meta:
         verbose_name = "Книга"
         verbose_name_plural = "Книги"
+
+# class Reader(models.Model):
+#     """Читатель книги"""
+#     fname = models.CharField("Имя", max_length=30)
+#     lname = models.CharField("Фамилия", max_length=30)
+#     city = models.CharField("Город", max_length=40)
+#     index = models.CharField("Почтовый индекс отделения", max_length=40, unique=True)
+#     book = models.ForeignKey(Book, verbose_name="Книга", on_delete=models.SET_NULL, null=True)
+#     check = models.BooleanField("Обработан", default=False)
+
+
+#     def __str__(self):
+#         return f'{self.lname} {self.fname}'
+
+#     class Meta:
+#         verbose_name = "Читатель"
+#         verbose_name_plural = "Читатели"
+
 
 # class RecordReader(models.Model):
 #     """Записи книги на руки"""

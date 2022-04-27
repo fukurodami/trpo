@@ -10,29 +10,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    </div>
     <section>
       <div class="content">
-        <div class="catalog">
-          <div class="books">
-            <div class="book">
-              <div class="book-img">
-                <a><img src="{{ book.image.url }}" alt=""></a>
-              </div>
-              <p class="book-title">Название: {{ book.title }}</p>
-              <p class="book-auth">Жанр: {{ book.genre }}</p>
-              <p class="book-auth">Автор: {{ book.authors }}</p>
-              <p class="book-auth">Издательство: {{ book.publisher }}</p>
-              <p class="book-auth">Переводчик: {{ book.translator }}</p>
-              <p class="book-auth">Дата издания: {{ book.date_ls }}</p>
-              <p class="book-auth">Вес: {{ book.weight }} г.</p>
-              <p class="book-auth">Количество страниц: {{ book.numb_page }} стр.</p>
-              <p class="book-auth">Возростное ограничение: {{ book.age_limit }}</p>
-              <p class="book-auth">Аннотация: {{ book.annotation }}</p>
-              <p class="book-price">Цена: {{ book.price }}р.</p>
+          <div class="book">
+            <div class="book-img">
+              <a><img src="{{ book.image.url }}" alt=""></a>
+            </div>
+            <div class="text">
+              <p><h4>Название: {{ book.title }}</h4></p>
+              <p>Жанр: {{ book.genre }}</p>
+              <p>Автор: {{ book.authors }}</p>
+              <p>Издательство: {{ book.publisher }}</p>
+              <p>Переводчик: {{ book.translator }}</p>
+              <p>Дата издания: {{ book.date_ls }}</p>
+              <p>Вес: {{ book.weight }} г.</p>
+              <p>Количество страниц: {{ book.numb_page }} стр.</p>
+              <p>Возростное ограничение: {{ book.age_limit }}</p>
+              <p>Аннотация: {{ book.annotation }}</p>
+              <p>Цена: {{ book.price }}р.</p>
             </div>
         </div>
       </div>
+      <form action="" method="post">
+        {% csrf_token %}
+        <div class="fname">
+          <input id="your_fname" type="text" name="your_fname" value="{{ current_fname }}" placeholder='Имя'>
+          <input id="your_lname" type="text" name="your_lname" value="{{ current_lname }}" placeholder='Фамилия'>
+          <input id="your_city" type="text" name="your_city" value="{{ current_city }}" placeholder='Город'>
+          <input id="your_index" type="text" name="your_index" value="{{ current_index }}" placeholder='Почтовый индекс'>
+          <input type="submit" value="Заказать">
+        </div>
+    </form>
     </section>
   </body>
 </html>
