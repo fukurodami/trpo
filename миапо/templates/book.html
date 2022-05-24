@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Book</title>
+    <link rel="stylesheet" href="{% static 'css/style_book.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section>
+      <div class="content">
+          <div class="book">
+            <div class="book-img">
+              <a><img src="{{ book.image.url }}" alt=""></a>
+            </div>
+            <div class="text">
+              <p><h4>Название: {{ book.title }}</h4></p>
+              <p>Жанр: {{ book.genre }}</p>
+              <p>Автор: {{ book.authors }}</p>
+              <p>Издательство: {{ book.publisher }}</p>
+              <p>Переводчик: {{ book.translator }}</p>
+              <p>Дата издания: {{ book.date_ls }}</p>
+              <p>Вес: {{ book.weight }} г.</p>
+              <p>Количество страниц: {{ book.numb_page }} стр.</p>
+              <p>Возростное ограничение: {{ book.age_limit }}</p>
+              <p>Аннотация: {{ book.annotation }}</p>
+              <p>Цена: {{ book.price }}р.</p>
+            </div>
+        </div>
+      </div>
+      <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Заказать</button>
+      </form>
+    </section>
+  </body>
+</html>
